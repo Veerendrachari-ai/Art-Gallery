@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1%;
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: aliceblue;
+    display: flex;
+    justify-content:center;
+    padding: 1rem;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 25px;
+    width: 90dvw;
+    position: relative;
+    left: 1%;
+}
+
+.navbar .logo {
+
+    position: relative;
+    right: 29%;
+    font-size: 1.5rem;
+    color: black;
+    font-family: "Satisfy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar .menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+   
+}
+
+.navbar .menu a:hover {
+    background-color:wheat;
+    border-radius: 25px;
+}
+
+.navbar .menu a.active {
+    font-weight: bold;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: aliceblue;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 999;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color: black;
+    background-color: transparent;
+    border: none;
+}
+
+/* Hamburger Button Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+    .navbar .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: relative;
+        left: 27%;
+    }
+}
+
+
+.active .hamburger div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.active .hamburger div:nth-child(2) {
+    opacity: 0;
+}
+
+.active .hamburger div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/*all works*/
+.main{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+article{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-gap: 10px;
+   flex: 1;
+   @media (max-width:786px) {
+    display: block;
+    
+   }
+   
+}
+
+
+footer{
+    background:aliceblue;
+   height:50dvh;
+   width: 96dvw;
+   left: 2%;
+   border-radius: 16px;
+   border-top: 8px solid orange;
+   position: absolute;
+   top: 323%;
+   
+  @media (max-width:786px ){
+    background:aliceblue;
+    height:700px;
+   width:95dvw;
+    border-radius: 16px;
+    border-top: 8px solid orange; 
+    position: absolute;
+top:1600%;
+  }
+ 
+   
+}
+#veeru{
+    color:orange;
+    position: relative;
+    left: 2%;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 25px;
+    @media (max-width:786px) {
+        font-size: 22px;
+        font-weight: 700;
+
+        
+    }
+}
+.data{
+   height: 50px;
+    width: 300px;
+    position: relative;
+   left: 2%;
+    color: black;
+    font-family: "Maven Pro", serif;
+    @media (max-width:480px) {
+       width:300px ;
+
+        
+    }
+}
+.line1{
+    position: absolute;
+    left: 35%;
+    top: 8%;
+   
+    height: 200px;
+    width: 3px;
+    border-radius: 60%;
+    background:orange;
+    @media (max-width:480px) {
+        display:none;
+ 
+         
+     }
+}
+.quick{
+    display: flex;
+    
+}
+.qlink{
+    color:orange;
+    text-shadow: 0px 0.5px 1px gold;
+    position: absolute;
+    left: 38%; 
+    top: 3%;
+    height: 40px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 25px;
+    @media (max-width:786px) {
+       position: absolute;
+       top: 35%;
+       left: 3%;
+ 
+         
+     }
+    
+}
+.qlink::before{
+    position: absolute;
+    content: "";
+  bottom:2%;
+    background:aliceblue;
+    height: 2.5px;
+    width:0px;
+    border-radius: 60%;
+    animation: line 1s infinite;
+
+}
+@keyframes line{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 160px;
+    }
+}
+
+.links a{
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+   
+}
+.links a:hover{
+    color: orange;
+}
+.links{
+ position: absolute;
+ left:38%;
+ top: 25%;
+@media (max-width:786px) {
+    top:45%;
+     left:3%;    
+ }
+}
+.connect{
+
+        color:orange;
+        text-shadow: 0px 0.5px 1px gold;
+        position: absolute;
+        left: 65%; 
+        top: 3%;
+        height: 40px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 25px;
+        @media (max-width:480px) {
+            top:65%;
+             left:3%;    
+         }
+
+
+}
+.line2{
+    position: absolute;
+    left: 60%;
+    top: 8%;
+   
+    height: 200px;
+    width: 3px;
+    border-radius: 60%;
+    background:orange;
+    @media (max-width:480px) {
+       display: none;   
+     }
+}
+.iconbox{
+    position: absolute;
+    height: 50px;
+    width: 250px;
+    top: 25%;
+    left: 65%;
+background: aliceblue;
+    border-radius: 16px;
+    color: orange;
+display: flex;
+justify-content: center;
+border: 2px outset orange;
+@media (max-width:786px) {
+    top:76%;
+     left:3%;    
+ }
+
+}
+.icon{
+    display: flex;
+    gap: 2rem;
+    padding: 7px;
+}
+.icon a{
+    color: orange;
+}
+.insta:hover{
+    color: orange;
+    transform: scale(0.5)
+}
+.linked:hover{
+    color: orange;
+    transform: scale(0.5)
+}
+.github:hover{
+    color: orange;
+    transform: scale(0.5)
+}
+.iconbox2{
+    position: absolute;
+    height: 50px;
+    width: 250px;
+    top: 25%;
+    left: 65%;
+background: black;
+    border-radius: 16px;
+    color: orange;
+display: flex;
+justify-content: center;
+border: 2px inset orange;
+@media (max-width:480px) {
+    top:70%;
+     left:3%;    
+ }
+}
+/*end of footer*/
